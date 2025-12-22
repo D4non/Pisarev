@@ -6,12 +6,20 @@
 
 Проанализировать и сравнить производительность операций над коллекциями: `List<T>`, `LinkedList<T>`, `Queue<T>`, `Stack<T>` и `ImmutableList<T>`.
 
-## Структура
+## Структура проекта
 
-Все файлы в папке lab2/:
-- Program.cs - главная программа
-- PerformanceBenchmark.cs - класс для замеров производительности
-- *Tests.cs - тесты для каждой коллекции
+```
+lab2/
+├── Program.cs                    # Главная программа
+├── PerformanceBenchmark.cs       # Класс для замеров производительности
+├── README.md                     # Документация
+└── tests/                        # Папка с тестами
+    ├── ImmutableListTests.cs     # Тесты для ImmutableList<T>
+    ├── LinkedListTests.cs        # Тесты для LinkedList<T>
+    ├── ListTests.cs              # Тесты для List<T>
+    ├── QueueTests.cs             # Тесты для Queue<T>
+    └── StackTests.cs             # Тесты для Stack<T>
+```
 
 ## Описание подхода к реализации замеров
 
