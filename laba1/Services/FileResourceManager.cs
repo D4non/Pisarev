@@ -82,14 +82,27 @@ public class FileResourceManager : IDisposable
 
     public void Dispose()
     {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
         if (!_disposed)
         {
-            _writer?.Dispose();
-            _reader?.Dispose();
-            _fileStream?.Dispose();
+            if (disposing)
+            {
+                _writer?.Dispose();
+                _reader?.Dispose();
+                _fileStream?.Dispose();
+            }
             _disposed = true;
         }
-        GC.SuppressFinalize(this);
+    }
+
+    ~FileResourceManager()
+    {
+        Dispose(false);
     }
 }
 

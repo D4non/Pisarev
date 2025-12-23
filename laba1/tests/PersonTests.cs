@@ -28,21 +28,21 @@ class PersonTests
         try
         {
             person.Email = "test@example.com";
-            Console.WriteLine($"✓ Корректный email установлен: {person.Email}");
+            Console.WriteLine($"Корректный email установлен: {person.Email}");
         }
         catch (ArgumentException ex)
         {
-            Console.WriteLine($"✗ Ошибка: {ex.Message}");
+            Console.WriteLine($"Ошибка: {ex.Message}");
         }
         
         try
         {
             person.Email = "invalid-email";
-            Console.WriteLine($"✗ Ошибка: Email без '@' был принят");
+            Console.WriteLine($"Ошибка: Email без '@' был принят");
         }
         catch (ArgumentException ex)
         {
-            Console.WriteLine($"✓ Валидация работает: {ex.Message}");
+            Console.WriteLine($"Валидация работает: {ex.Message}");
         }
         
         Console.WriteLine($"Id (JsonPropertyName 'personId'): {person.Id}");
