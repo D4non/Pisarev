@@ -3,15 +3,6 @@ using System.Collections.Immutable;
 
 namespace ConsoleApp2;
 
-public class BenchmarkResult
-{
-    public string Operation = "";
-    public string CollectionType = "";
-    public double AverageTimeMs;
-    public double MinTimeMs;
-    public double MaxTimeMs;
-}
-
 public static class PerformanceBenchmark
 {
     public const int CollectionSize = 100000;
