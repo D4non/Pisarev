@@ -47,8 +47,6 @@ class PersonTests
         
         Console.WriteLine($"Id (JsonPropertyName 'personId'): {person.Id}");
         Console.WriteLine($"PhoneNumber (JsonPropertyName 'phone'): {person.PhoneNumber}");
-        
-        Console.WriteLine("=== Тесты Person завершены ===\n");
     }
 }
 
