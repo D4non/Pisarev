@@ -1,0 +1,22 @@
+# .NET
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
